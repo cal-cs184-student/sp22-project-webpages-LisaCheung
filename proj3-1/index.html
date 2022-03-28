@@ -202,10 +202,19 @@
 			</table>
 		</div>
 		<p>
-			It took 0.0916 seconds to render the cow with bvh acceleration compared to around 40 seconds without BVH
-			acceleration.
-			It took 0.1661 seconds to render the beetle with BVH acceleration compared to 43 seconds without BVH
-			acceleration.
+
+			For the cow without BVH acceleration, it took 18.4886 seconds to render, with an average speed of 0.0259
+			million
+			rays per second and 707.630835 intersection tests per ray. With BVH acceleration,it took 0.0966 seconds to
+			render, with an average speed of 4.2017 million
+			rays per second and 4.24 intersection tests per ray.
+
+			For the beetle without BVH acceleration, it took 24.2714 seconds to render, with an average speed of 0.0197
+			million
+			rays per second and 926.5 intersection tests per ray. With BVH acceleration,it took 0.1706 seconds to
+			render, with an average speed of 2.2 million
+			rays per second and 8.7 intersection tests per ray.
+
 			Using the BVH improved the runtime from linear runtime to log n runtime because we could ignore nodes with
 			bounding boxes if there was no ray intersection and traverse through the nodes more quickly.
 			We do not have to linearly iterate and test every single primitive and instead only test for intersection
